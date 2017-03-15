@@ -1,0 +1,27 @@
+<h1>Search Products</h1>
+
+<%= form_tag(search_path, method: :get) do  %>
+  <p>
+    <%= text_field_tag :q, params[:q] %>
+    <%= submit_tag "Search" %>
+  </p>
+<% end %>
+
+<% unless @products.empty? %>
+<table>
+  <tr>
+    <th>Brand</th>
+    <th>Price</th>
+    <th>Color</th>
+    <th>Manufacturer</th>
+  </tr>
+  <% for product in @products %>
+    <tr>
+      <td> <%= product.brand %> </td>
+      <td> <%= product.price %> </td>
+      <td> <%= product.color %> </td>
+      <td> <%= product.manufacturer %> </td>            
+    </tr>
+  <% end %>
+</table>
+<% end %>
