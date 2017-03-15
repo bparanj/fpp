@@ -4,7 +4,7 @@ class Product
   def self.search(term)
     search = Search.where(term: 'iphone')
     
-    if search.nil?
+    if search && search.count == 0
       sem3 = Semantics3::Products.new(API_KEY, API_SECRET)
       sem3.products_field("search", term)
       data = sem3.get_products
