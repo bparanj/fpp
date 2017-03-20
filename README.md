@@ -1,3 +1,3 @@
-# README
 
-For processing the network call in the background, I would follow my blog post: https://rubyplus.com/articles/4111-Processing-Stripe-Payments-with-a-Background-Worker-in-Rails-5. The article uses Stripe as an example, but the technique is the same.
+# Watch the Screencast
+[![](https://images.rubyplus.com/rubyplus-screencast.png)](https://rubyplus.com/episodes/401-Semantics3-API-in-Rails-5)
